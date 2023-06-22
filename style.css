@@ -443,3 +443,39 @@ body.nav-active {
 .hero-btn:is(:hover, :focus-visible) {
     color: var(--text-majorelle-blue);
 }
+/* 
+SERVICE SECTION 0000000*/
+/* REUSED  */
+.section-subtitle {
+    color: var(--text-majorelle-blue);
+    font-weight: var(--weight-medium);
+    text-transform: uppercase;
+}
+.section-title {
+    margin-block: 10px;
+}
+
+/* REUSED  */
+
+.section .container {
+    display: grid;
+    gap: 25px;
+}
+.service-card:nth-child(2) {
+    background-color: var(--bg-chrome-yellow-alpha-5);
+}
+.service-card:nth-child(3) {
+    background-color: var(--bg-red-salsa-alpha-5);
+  
+}
+.service-card:nth-child(4) {
+    background-color: rgb(196, 191, 200);
+
+}
+.service-card {
+    padding: 25px 20px;
+    border-radius: var(--radius-20);
+}
+.service-card .card-title {
+    margin-block: 10px 5px;   
+}
