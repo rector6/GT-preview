@@ -2,13 +2,13 @@
 const preloader = document.querySelector("[data-preloader]");
 
 window.addEventListener("load", () => {
-    preloader.classList.add(".remove");
+    preloader.classList.add("remove");
 });
 
 // event on multiple elelmets
 const addEventOnElements = function (elements, evenType, callback) {
     for(let i = 0, len = elements.length; i < len; i ++ ){
-        elements[1]/addEventListener(evenType,callback);
+        elements[i].addEventListener(evenType, callback);
     }
 }
 
@@ -32,5 +32,5 @@ addEventOnElements(navTogglers, "click", toggleNav);
 const header = document.querySelector("[data-header]");
 
 window.addEventListener("scroll", function () {
-    header.classList[this.window.scrollY > 100? "add" : "remove"]("active");
+    header.classList[window.scrollY > 100 ? "add" : "remove"]("active");
 });

@@ -4,29 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Oxygen:wght@300&family=Playfair:ital,wght@0,300;0,500;1,400;1,500&family=Roboto:ital,wght@0,400;1,300;1,400&family=Ubuntu:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="/your-path-to-fontawesome/css/custom-icons.css" rel="stylesheet">
-    <link href="/your-path-to-fontawesome/css/sharp-solid.css" rel="stylesheet"> -->
+    <link href="/your-path-to-fontawesome/css/sharp-solid.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- <link rel="stylesheet" href="media-style.css">
+    <link rel="stylesheet" href="media-style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,500&family=Oxygen:wght@300&family=Playfair:ital,wght@0,300;0,500;1,400;1,500&family=Roboto:ital,wght@0,400;1,300;1,400&family=Source+Sans+Pro:ital,wght@0,200;1,200&family=Ubuntu:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,500&family=Oxygen:wght@300&family=Playfair:ital,wght@0,300;0,500;1,400;1,500&family=Roboto:ital,wght@0,400;1,300;1,400&family=Source+Sans+Pro:ital,wght@0,200;1,200&family=Ubuntu:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
     <title>My Site</title>  
   </head>
   <body>
     <!-- preloader -->
-    <div class="preloader remove" data-preloader >
+    <div class="preloader" data-preloader>
         <div class="preloader-inner">
-            <img src="logo.png" alt="" class="img" width="50px" height="50px">
+            <img src="logo.png" alt="" class="img" width="50" height="50">
         </div>
     </div>
 
@@ -37,17 +37,18 @@
       <div class="container">
 
             <a href="#" class="logo">
-                <img src="logo.png" alt="llogo" width="50" height="38">
+                <img src="logo.png" alt="llogo" width="187" height="38">
             </a>
 
         <nav class="navbar" data-navbar>
 
             <div class="navbar-top">  
                 <a href="" class="logo">
-                    <img src="logo.png" alt="llogo" width="187" height="38px">
+                    <img src="logo.png" alt="llogo" width="187" height="38">
                 </a>
-                <button class="nav-toggle-btn" aria-label="close menu" data-toggler>
-                  <img  src="logo.png" class="close-outline " width="30" height="30">
+                <button class="nav-toggle-btn" aria-label="close menu" data-nav-toggler>
+                  <!-- <i class="fa fa-xmark"></i> -->
+                  <img src="icons8-menu.gif" alt="" width="50" height="50">
                 </button>
             </div>
 
@@ -55,7 +56,7 @@
             <ul class="navbar-list">
 
               <li class="navbar-item">
-                <a href="#" class="navbar-link active">Home</a>
+                <a href="#" class="navbar-link">Home</a>
               </li>
               <li class="navbar-item">
                 <a href="#" class="navbar-link">About</a>
@@ -82,13 +83,58 @@
         </nav>
 
         <button class="nav-toggle-btn" aria-label="open menu" data-nav-toggler>
-          <img src="icons8-menu.gif" alt="" width="50" height="50">
+          <!-- <i class="fa fa-xmark"></i> -->
+          <img src="icons8-menu.gif" alt="" width="30" height="30">
         </button>
 
 
-        <div class="overlay active" data-overlay data-nav-toggler ></div>
+        <div class="overlay" data-overlay data-nav-toggler ></div>
       </div> 
     </header>
+
+
+
+    <main>
+      <article>
+
+        <section class="section hero has-bg-image" aria-label="hero" style="background-image: url('')">
+
+          <div class="container">
+
+            <div class="hero-content">
+              <p class="hero-subtitle">Explore the World <img src="logo" alt="" width="20" height="20" class="img">
+              </p>
+              <h1 class="h1 title hero-title">
+                It's a Big World Out There, Go Explore
+              </h1>
+              <p class="hero-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id.
+              </p>
+
+              <div class="wrapper">
+                <a href="" class="btn btn-seconday">
+                  <span class="span">Plan a Trip</span>
+                  <img src="icons8-menu.gif" alt="" width="20" height="20">
+                </a>
+
+                <button class="hero-btn">
+
+                  <div class="btn-img">
+                    <img src="logo.png" alt="" width="50" height="50" class="img-cover">
+                  </div>
+
+                  <p class="text">Watch Our Story</p>
+                </button>
+              </div>
+            </div>
+
+            <figure class="hero-banner">
+              <img src="undraw_messages_re_qy9x.svg" alt="" width="631" height="735" class="w-100"> 
+            </figure>
+          </div>
+        </section>
+      </article>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
