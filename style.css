@@ -153,7 +153,8 @@ body.nav-active {
   box-shadow: var(--shadow-2);
 }
 .btn-secondary {
-    background-color: var(--bg-red-salsa); 
+    background-color:red; 
+    color: var(--bg-black-alpha);
 }
 .btn-secondary:is(:hover,
 :focus-visible){
@@ -280,10 +281,10 @@ body.nav-active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 35px;
+    /* padding: 35px; */
 }
 .navbar-list {
-    margin-block-start: 30px;
+    margin-block-start: 50px;
  
 }
 .navbar-link {
@@ -293,7 +294,6 @@ body.nav-active {
     font-weight: var(--weight-medium);
     padding-block: 8px;
     transition: var(--transition-1);
-    margin: 60px;
 }
 .navbar-link:before {
     content: "";
@@ -306,7 +306,7 @@ body.nav-active {
     transform: translateY(-50%);
     border-radius: 5px;
     opacity: 0;
-    transition: 2s ease-out;
+    transition: var(--transition-1);
 }
 .navbar-link:is(:hover,
 :focus-visible, .active)::before {
@@ -342,7 +342,7 @@ body.nav-active {
     width: 100%;
     background-color: var(--bg-white);
     opacity: 0;
-    /* visibility: hidden; */
+    visibility: hidden;
     transition: var(--transition-1);
 }
 .overlay.active{
@@ -621,7 +621,7 @@ GALLERY SECTION */
 .footer .logo img {
     width: 180px;
 }
-.footer-brand  .footer-text{
+.footer-brand .footer-text{
     margin-block: 20px;
 }
 .social-list {
@@ -650,7 +650,7 @@ GALLERY SECTION */
 .footer-link {
     margin-block-start: 10px;
 }
-.footer-link.hero-btn:is(:hover, :focus-visible) {
+.footer-link:is(:hover, :focus-visible) {
     text-decoration: underline;
 }
 .footer-list .footer-text {
@@ -674,6 +674,7 @@ GALLERY SECTION */
     height: 45px;
     background-color: var(--bg-majorell-blue);
     font-size: 2rem;
+    display: grid;
     place-items: center;
     position: absolute;
     border-radius: var(--radius-circle);
@@ -683,9 +684,8 @@ GALLERY SECTION */
     transition: var(--transition-1);
     color: var(--bg-white);
 }
-
 .input-btn img {
-    transform: translateX(-10px);
+    transform: translateX(-2px);
     rotate: 45deg;
 }
 .input-btn:is(:hover, :focus-visible) {
@@ -793,8 +793,6 @@ RESPONSIVE FOR LEAGER DEN 575 SCREEN */
 
     .container {
         max-width: 720px;
-        width: 100%;
-        margin-inline: auto;
     }
     .btn {
         height: 60px;
@@ -899,7 +897,7 @@ RESPONSIVE FOR LEAGER DEN 575 SCREEN */
         grid-template-columns: 1fr 1fr;
         gap: 25px;
     }
-    .gallery-list:nth-child(n+3){
+    .gallery-item:nth-child(n+3){
         grid-column: 1 / 3;
     }
     
@@ -952,7 +950,7 @@ RESPONSIVE FOR LEAGER DEN 575 SCREEN */
     .navbar-list {
         margin-block-start: 0;
         display: flex;
-        gap: 10px;
+        gap: 30px;
         margin-inline: auto;
     }
     .navbar-link:is(:hover, :focus-visible, .active) {
@@ -1002,14 +1000,17 @@ RESPONSIVE FOR LEAGER DEN 575 SCREEN */
 
 
     /* ESP */
-    .exp {
+    .exp .container{
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 80px;
-        display: flex;
+        /* display: flex; */
+    }
+    .exp-content {
+        order: 1;
     }
     .exp-list {
-        flex-wrap: wrap ;
+        flex-wrap: wrap;
     }
     .exp-item {
         margin-block-start: 0;
@@ -1017,11 +1018,13 @@ RESPONSIVE FOR LEAGER DEN 575 SCREEN */
         gap: 0;
         align-items: flex-start;
     }
+    /* GALLERTION MEDUIA */
+
     .gallery-list {
-        grid-template-columns: repeat(1fr 1fr 1fr);
+        grid-template-columns: repeat(6, 1fr);
 
     }
-    /* .gallery-item:nth-child(n+3) {
+    .gallery-item:nth-child(n+3) {
         grid-column: auto;
     }
     .gallery-item:nth-child(3) {
@@ -1030,7 +1033,7 @@ RESPONSIVE FOR LEAGER DEN 575 SCREEN */
     }
     .gallery-item:nth-child(n+4) {
         grid-column: span 2;
-    } */
+    }
     .gallery .item-banner {
         aspect-ratio: unset;
         width: 100%;
@@ -1048,8 +1051,6 @@ RESPONSIVE FOR LEAGER DEN 575 SCREEN */
 
 @media (min-width: 1200px) {
    
-
-
     :root {
 
         /* topopgrahpy */
@@ -1065,13 +1066,131 @@ RESPONSIVE FOR LEAGER DEN 575 SCREEN */
     /* HEEADER */
     .header .logo img {
         width: 80px;
-        padding-block: 20px  20px;
     }
     .navbar-list {
-        gap: 10px;
+        gap: 50px;
     }
     .header-action {
         gap: 40px;
     }
+/* 
+    HERO SECTION MEDIA */
+
+    .hero-title {
+        margin-block: 30px;
+    }
+    .hero-text {
+        margin-block-end: 50px;
+    }
+
+    /* SERVICE SERVIC */
+
+    .service .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .service .title-wrapper {
+        grid-column: span 3;
+    }
+/* 
+    DESTINATION MEDIA */
+
+    .desti-card .card-price {
+        font-size: 2rem;
+        padding: 8px 20px;
+    }
+    .desti-card .card-title {
+        margin-block: 30px 10px;
+    }
+    .desti-card.card-rating {
+        margin-block-start: 15px;
+    }
+
+
+    /* EXP */
+    .exp .section-text {
+        margin-block: 30px 40px;
+    }
+    .exp-list {
+        gap: 50px;
+    }
+
+
+    /* CTA */
+    .cta-card {
+        padding-block: 120px;
+    }
+/* 
+    FOOTER MEDIA */
+
+    .footer-top {
+        grid-template-columns: 1fr 0.5fr 0.6fr 0.6fr 1fr;
+        gap: 60px;
+    }
+    .footer-brand .footer-text {
+        margin-block: 35px 30px;
+    }
+    .footer-list-title {
+        margin-block-end: 25px;
+    }
+    .footer-bottom-list {
+        gap: 40px;
+    }
+}
+
+/* RESPOMSIVE FOR LARGER THEN 1400PX SCREEN */
+@media (min-width: 1400px) {
+     /* to increase font size */
+
+
+     :root {
+        --fontSize-1:  6.0rem;
+     }
+
+
+     /* REUSED STYLE */
+
+     .container {
+        max-width: 1350px;
+     }
+
+     .hero-banner {
+        width: 500px;
+        padding-block-start: 50px;
+     }
+
+     /* HEADER */
+     .navbar-list {
+        gap: 70px;
+     }
+
+     /* SECTION MEDIA */
+
+     .service .section-title {
+        margin-block-end: 20px;
+     }
+     .service .title-wrapper {
+        grid-column: auto;
+        padding-inline-end: 0;
+     }
+     .service .container {
+        grid-template-columns: 1fr repeat(3, 0.9fr);
+        gap: 50px;
+     }
+
+     .service-card:nth-child(3) {
+        margin-block-start: 80px;
+     }
+/* 
+
+     DESTINATION  */
+     .desti-list {
+        gap: 50px;
+     }
+
+     /* FOOTER SECTION MEDIA */
+     .footer-top {
+        padding-block-end: 80px;
+     }
+
 }
 
